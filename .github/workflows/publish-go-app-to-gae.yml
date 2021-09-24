@@ -38,8 +38,6 @@ jobs:
           # Please uncomment if you use Firebase admin sdk
           #          echo ${{ secrets.FIREBASE_ADMINSDK_JSON }} | base64 -d > firebase-adminsdk.json
       - name: GAE APP publish
-        env:
-          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
         run: |
           gcloud app deploy --quiet ./app.yaml
       - name: Run a script of finished echo
