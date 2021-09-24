@@ -1,0 +1,10 @@
+runtime: go116
+
+handlers:
+  # All other URLs are handled by the Go application.
+  - url: /.*
+    script: auto
+env_variables:
+  PORT: 8080
+includes:
+  - secret.yaml
